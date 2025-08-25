@@ -6,7 +6,7 @@ public class OrderService {
     }
     
     public void checkout(String customerEmail, double subtotal) {
-        double tax = subtotal * 0.18; // Simple tax calculation
+        double tax = subtotal * 0.18;
         double total = subtotal + tax;
         
         notificationService.send(customerEmail, "Thanks! Your total is " + total);

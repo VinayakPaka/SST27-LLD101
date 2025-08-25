@@ -3,19 +3,16 @@ public class Player implements MediaPlayer {
     
     @Override
     public void play(byte[] fileBytes) {
-        // Single responsibility: decode and create frame
         Frame frame = decodeFrame(fileBytes);
         lastFrame = frame;
         
-        // Single responsibility: render UI
         renderUI(fileBytes.length);
         
-        // Single responsibility: cache management
         cacheFrame();
     }
     
     private Frame decodeFrame(byte[] fileBytes) {
-        return new Frame(fileBytes); // pretend decoding
+        return new Frame(fileBytes);
     }
     
     private void renderUI(int byteCount) {
