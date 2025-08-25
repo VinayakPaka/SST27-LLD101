@@ -1,5 +1,3 @@
-public interface Vehicle {
-    void startEngine();
-    void pedal(int effort);
-    void recharge(int kWh);
+public interface Vehicle extends EngineVehicle, PedalVehicle, ElectricVehicle {
+    // This interface now only includes methods that implementing classes can actually perform
 }
